@@ -1,0 +1,26 @@
+/* contact page responsive */
+@media only screen and (min-width: 320px) and (max-width: 991px) {
+    .contact .contact-information {
+        padding: 30px;
+        transform: none;
+    }
+    .contact .contact-information .info-list li span.icon {
+        display: block;
+    }
+    .contact .contact-information .social-link {
+        margin-top: 20px;
+    }
+    .contact {
+        padding-top: 60px;
+    }
+    .contact .contact-form {
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .contact .contact-information { 
+        height: auto;
+    }
+}

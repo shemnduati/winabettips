@@ -1,0 +1,91 @@
+/* schedule page */
+@media only screen and (min-width: 576px) and (max-width: 991px) {
+    .schedule {
+        padding: 60px 0;
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 575px) {
+    .schedule .single-match .part-team {
+        padding: 26px 40px 30px;
+    }
+    .schedule {
+        padding: 60px 0;
+    }
+}
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    .schedule .single-match .part-team {
+        padding: 30px;
+        display: block;
+        padding-bottom: calc(30px + 171px);
+        position: relative;
+        overflow: hidden;
+    }
+    .schedule .single-match .part-team .single-team {
+        display: block;
+    }
+    .schedule .single-match .part-team .single-team:last-child {
+        margin-top: 80px;
+    }
+    .schedule .single-match .part-team .match-details {
+        order: 2;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        padding: 30px 0;
+        background: #efefef;
+        border: 1px solid #ddd;
+        border-left: none;
+        border-right: none;
+    }
+    .schedule .single-match .part-team .match-details span.versase {
+        position: absolute;
+        bottom: calc(100% + 153px);
+        margin-bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .schedule .single-match .part-team .match-details span.versase:after {
+        width: 480px;
+        z-index: -1;
+        z-index: -2;
+    }
+    .schedule .single-match .part-team .match-details span.versase:before {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        z-index: -1;
+        border-radius: 50%;
+    }
+    .schedule .single-match .part-team .single-team .logo {
+        height: 60px; 
+        width: auto;
+    }
+    .schedule .single-match .part-team .single-team .logo img {
+        height: 100%;
+        width: auto;
+    }
+    .schedule .single-match .part-head .match-title {
+        font-size: 20px;
+    }
+    .schedule .single-match {
+        border: 1px solid rgba(239, 98, 68, 0.4);
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: none;
+    }
+    .schedule {
+        padding: 60px 0;
+    }
+
+    .bettix-pagination ul li a {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        margin-right: 5px;
+    }
+}

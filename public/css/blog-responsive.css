@@ -1,0 +1,107 @@
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    .blog-page .bettix-pagination ul li a {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        margin-right: 5px;
+    }
+    .blog.blog-details .single-blog .part-text a.title {
+        font-size: 20px;
+    }
+    .blog.blog-details .single-blog .part-text p {
+        font-size: 16px;
+    }
+    .blog.blog-details .single-blog .part-text p.marked {
+        line-height: 28px;
+    }
+    .blog.blog-details .comment-area .single-comment {
+        display: block;
+        padding-right: 0;
+    }
+    .blog.blog-details .comment-area .single-comment .part-img {
+        margin-bottom: 20px;
+    }
+    .blog.blog-details .comment-area .single-comment.reply {
+        padding-left: 0;
+    }
+    .blog.blog-details .blog-sidebar {
+        margin-top: 30px;
+    }
+    .blog.blog-details .blog-sidebar .single-sidebar .popular-news .single-post {
+        display: block;
+    }
+    .blog.blog-details .blog-sidebar .single-sidebar .popular-news .single-post .part-img {
+        margin-bottom: 20px;
+    }
+    .blog.blog-detail {
+        padding: 70px 0 40px;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 575px) {
+    .blog.blog-details .single-blog .part-text a.title {
+        font-size: 20px;
+    }
+    .blog.blog-details .single-blog .part-text p {
+        font-size: 16px;
+    }
+    .blog.blog-details .single-blog .part-text p.marked {
+        line-height: 28px;
+    }
+    .blog.blog-details .comment-area .single-comment {
+        display: block;
+        padding-right: 0;
+    }
+    .blog.blog-details .comment-area .single-comment .part-img {
+        margin-bottom: 20px;
+    }
+    .blog.blog-details .comment-area .single-comment.reply {
+        padding-left: 0;
+    }
+    .blog.blog-details .blog-sidebar {
+        margin-top: 30px;
+    }
+    .blog.blog-details .blog-sidebar .single-sidebar .popular-news .single-post {
+        display: block;
+    }
+    .blog.blog-details .blog-sidebar .single-sidebar .popular-news .single-post .part-img {
+        margin-bottom: 20px;
+    }
+    .blog.blog-detail {
+        padding: 70px 0 40px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .blog.blog-details .single-blog .part-text a.title {
+        font-size: 24px;
+    }
+    .blog.blog-details .single-blog .part-text p {
+        font-size: 16px;
+    }
+    .blog.blog-details .single-blog .part-text p.marked {
+        line-height: 28px;
+    }
+    /* .blog.blog-details .comment-area .single-comment {
+        display: block;
+        padding-right: 0;
+    }
+    .blog.blog-details .comment-area .single-comment .part-img {
+        margin-bottom: 20px;
+    }
+    .blog.blog-details .comment-area .single-comment.reply {
+        padding-left: 0;
+    }
+    .blog.blog-details .blog-sidebar {
+        margin-top: 30px;
+    }
+    .blog.blog-details .blog-sidebar .single-sidebar .popular-news .single-post {
+        display: block;
+    }
+    .blog.blog-details .blog-sidebar .single-sidebar .popular-news .single-post .part-img {
+        margin-bottom: 20px;
+    } */
+    .blog.blog-detail {
+        padding: 70px 0 40px;
+    }
+}

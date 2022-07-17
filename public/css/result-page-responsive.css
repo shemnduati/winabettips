@@ -1,0 +1,23 @@
+/* result page */
+@media only screen and (min-width: 320px) and (max-width: 991px) {
+    .result {
+        padding: 60px 0;
+    }
+    .result .result-sheet-cover {
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+    .result .result-sheet {
+        width: 900px;
+        border: 1px solid #f81b64;
+    }
+    .result .result-sheet .result-title {
+        font-size: 20px; 
+    }
+    .result .filter-menu .form-group {
+        margin-bottom: 10px;
+    }
+    .result .filter-menu {
+        margin-bottom: 30px;
+    }
+}

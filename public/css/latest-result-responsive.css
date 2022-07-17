@@ -1,0 +1,41 @@
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    .latest-result {
+        padding: 60px 0;
+    }
+    .latest-result .single-match .part-team {
+        padding: 30px;
+        display: block;
+    }
+    .latest-result .single-match .part-team .match-details {
+        border: 1px dashed #c40c49;
+        width: 100%;
+        padding: 24px 0;
+        margin: 20px 0;
+    }
+    .latest-result .single-match .part-team .single-team.win-team {
+        margin-top: 40px;
+    }
+    .latest-result .single-match {
+        box-shadow: none;
+        border: 1px dashed #c40c49;
+    }
+    .latest-result .single-match .part-head .match-title {
+        font-size: 20px;
+    }
+    .latest-result .bettix-pagination ul li a {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        margin-right: 5px;
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 569px) {
+    .latest-result .single-match .part-team {
+        padding: 50px 15px;
+    }
+}
+@media only screen and (min-width: 320px) and (max-width: 991px) {
+    .latest-result {
+        padding: 60px 0;
+    }
+}

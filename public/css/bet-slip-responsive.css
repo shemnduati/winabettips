@@ -1,0 +1,35 @@
+@media only screen and (min-width: 320px) and (max-width: 575px) {
+    .bet-slip {
+        padding: 60px 0;
+    }
+    .bet-slip .bet-slip-sidebar {
+        margin-top: 30px;
+    }
+    .bet-slip .bet-slip-content .single-bet {
+        display: block;
+    }
+    .bet-slip .bet-slip-content .single-bet .right-side .bet-stake form input {
+        width: 100%;
+    }
+    .bet-slip .bet-slip-content .single-bet .left-side .bet-place {
+        padding-left: 0;
+    }
+    .bet-slip .bet-slip-content .single-bet .left-side {
+        margin: 10px 0;
+    }
+    .bet-slip .bet-slip-content .single-bet .right-side .bet-returns {
+        margin-left: 10px;
+    }
+    .bet-slip .bet-slip-content .team-opponent span.team .versace {
+        margin: 0 8px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 991px) {
+    .bet-slip {
+        padding: 60px 0;
+    }
+    .bet-slip .bet-slip-sidebar {
+        margin-top: 30px;
+    }
+}

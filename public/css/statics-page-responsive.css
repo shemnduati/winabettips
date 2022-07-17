@@ -1,0 +1,502 @@
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    /* recent match list */
+    .statics-page .matched-for-result .single-upcoming-match {
+        /* padding: 30px 25px; */
+    }
+    .statics-page .matched-for-result .single-upcoming-match .summery {
+        /* position: initial; */
+        padding: 0 20px;
+    }
+    .statics-page .matched-for-result .upcoming-match-list .single-upcoming-match .single-team:last-child {
+        /* padding-left: 10px; */
+    }
+    .statics-page .matched-for-result .single-upcoming-match .single-team .part-logo img {
+        height: 50px;
+    }
+    .statics-page .matched-for-result .single-upcoming-match div {
+        order: 0!important;
+    }
+    .statics-page .matched-for-result .upcoming-match-list {
+        margin-bottom: 30px;
+    }
+    .statics-page .matched-for-result .upcoming-match-list.mt-30 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .statics-page .single-game {
+        padding: 15px;
+    }
+    .statics-page .single-game:after {
+        height: 20px;
+    }
+    .statics-page .round-set.one .col-xl-3:nth-child(2n+0) .single-game:before {
+        bottom: -20px;
+    }
+    .statics-page .round-set.one .col-xl-3:nth-child(2n+1) .single-game:before {
+        bottom: -20px;
+    }
+    .statics-page .round-set {
+        margin-bottom: 0;
+    }
+    .statics-page .round-set.two .col-xl-4 .single-game:before {
+        height: 26px;
+    }
+    .statics-page .round-set.final .single-game:before {
+        top: -25px;
+        margin-left: -144px;
+        width: 290px;
+    }
+    .statics-page .round-set.final .single-game:after {
+        top: auto;
+        bottom: 100%;
+        height: 25px;
+    }
+    .statics-page .round-set.two h3.title, .statics-page .round-set.final h3.title {
+        position: relative;
+        top: 50px
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .statics-page {
+        padding: 60px 0;
+    }
+    .betting-table .bett-menu .nav-tabs {
+        justify-content: center;
+    }
+    .betting-table .bett-menu .nav-tabs .nav-item .nav-link {
+        padding: 7px 0;
+        border-radius: 0;
+    }
+    .betting-table .bett-menu .nav-tabs .nav-item .nav-link.active {
+        border-radius: 0;
+    }
+    .betting-table .bett-menu .nav-tabs .nav-item .nav-link i {
+        margin: 0;
+        padding: 0 12px;
+    }
+
+    .betting-table .bett-menu .nav-tabs .nav-item .nav-link .text {
+        display: none;
+    }
+    .betting-table .bett-menu .nav-tabs .nav-item .nav-link i {
+        margin-right: 0;
+    }
+    .betting-table .bett-menu .nav-tabs .nav-item {
+        width: 12%;
+        margin-right: 10px;
+    }
+    .betting-table .bett-menu .nav-tabs .nav-item .nav-link {
+        justify-content: center;
+    }
+
+    /* tab-pane */
+    .statics-page h4.tab-title {
+        font-size: 16px;
+    } 
+    .statics-page h4.tab-title i {
+        font-size: 24px;
+    }
+    .statics-page .round-set.one .col-xl-3:nth-child(2n+1) .single-game:before {
+        display: none;
+    }
+    .statics-page .single-game:after, .statics-page .single-game:before {
+        display: none!important;
+    }
+
+    .statics-page .single-game {
+        margin-bottom: 30px;
+    }
+    .statics-page div[class*='col']:last-child .single-game:last-child {
+        margin-bottom: 0;
+    }
+    .statics-page .round-set h3.title {
+        margin-bottom: 17px;
+    }
+
+    /* match winner */
+    .statics-page .match-winner .single-match-winner {
+        margin-bottom: 30px;
+    }
+    .statics-page .match-winner {
+        padding: 60px 0 30px;
+    }
+
+    /* recent match list */
+    .statics-page .matched-for-result .single-upcoming-match {
+        padding: 30px 25px;
+    }
+    .statics-page .matched-for-result .single-upcoming-match .summery {
+        position: initial;
+        padding: 20px 0;
+    }
+    .statics-page .matched-for-result .upcoming-match-list .single-upcoming-match .single-team:last-child {
+        padding-left: 10px;
+    }
+    .statics-page .matched-for-result .single-upcoming-match .single-team .part-logo img {
+        height: 50px;
+    }
+    .statics-page .matched-for-result .single-upcoming-match div {
+        order: 0!important;
+    }
+    .statics-page .matched-for-result .upcoming-match-list {
+        margin-bottom: 30px;
+    }
+    .statics-page .matched-for-result .upcoming-match-list.mt-30 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .statics-page {
+        padding: 60px 0;
+    }
+    .betting-table .bett-menu .nav-tabs {
+        justify-content: center;
+    }
+    .betting-table .bett-menu .nav-tabs .nav-item .nav-link {
+        padding: 7px 0;
+        border-radius: 0;
+    }
+    .betting-table .bett-menu .nav-tabs .nav-item .nav-link.active {
+        border-radius: 0;
+    }
+    .betting-table .bett-menu .nav-tabs .nav-item .nav-link i {
+        margin: 0;
+        padding: 0 12px;
+    }
+
+    .betting-table .bett-menu .nav-tabs .nav-item .nav-link .text {
+        display: none;
+    }
+    .betting-table .bett-menu .nav-tabs .nav-item .nav-link i {
+        margin-right: 0;
+    }
+    .betting-table .bett-menu .nav-tabs .nav-item {
+        width: 25%;
+        margin-right: 0;
+    }
+    .betting-table .bett-menu .nav-tabs .nav-item .nav-link {
+        justify-content: center;
+    }
+
+    /* tab-pane */
+    .statics-page h4.tab-title {
+        font-size: 16px;
+    } 
+    .statics-page h4.tab-title i {
+        font-size: 24px;
+    }
+    .statics-page .round-set.one .col-xl-3:nth-child(2n+1) .single-game:before {
+        display: none;
+    }
+    .statics-page .single-game:after, .statics-page .single-game:before {
+        display: none!important;
+    }
+
+    .statics-page .single-game {
+        margin-bottom: 30px;
+    }
+    .statics-page div[class*='col']:last-child .single-game:last-child {
+        margin-bottom: 0;
+    }
+    .statics-page .round-set h3.title {
+        margin-bottom: 17px;
+    }
+
+    /* match winner */
+    .statics-page .match-winner .single-match-winner {
+        padding: 30px;
+        /* display: block; */
+    }
+    .statics-page .match-winner .single-match-winner .circle span.cicle-title {
+        position: initial;
+        font-size: 15px;
+        margin-top: 10px;
+    }
+    .statics-page .match-winner .single-match-winner .circle canvas {
+        width: 70px!important;
+        height: 70px!important;
+    }
+    .statics-page .match-winner .single-match-winner .single-percentage span.number {
+        font-size: 25px;
+        margin-top: 0;
+    }
+    .statics-page .match-winner .single-match-winner .single-percentage span.title {
+        font-size: 15px;
+        margin-bottom: 0;
+    }
+    .statics-page .match-winner .single-match-winner .single-percentage:after {
+        display: none;
+    }
+    .statics-page .match-winner .single-match-winner .single-percentage {
+        top: -14px;
+    }
+    .statics-page .match-winner .single-match-winner {
+        margin-bottom: 30px;
+    }
+    .statics-page .match-winner {
+        padding: 60px 0 30px;
+    }
+
+    /* recent match list */
+    .statics-page .matched-for-result .single-upcoming-match {
+        padding: 30px 25px;
+    }
+    .statics-page .matched-for-result .single-upcoming-match .summery {
+        position: initial;
+        padding: 20px 0;
+    }
+    .statics-page .matched-for-result .upcoming-match-list .single-upcoming-match .single-team:last-child {
+        padding-left: 10px;
+    }
+    .statics-page .matched-for-result .single-upcoming-match .single-team .part-logo img {
+        height: 50px;
+    }
+    .statics-page .matched-for-result .single-upcoming-match div {
+        order: 0!important;
+    }
+    .statics-page .matched-for-result .upcoming-match-list {
+        margin-bottom: 30px;
+    }
+    .statics-page .matched-for-result .upcoming-match-list.mt-30 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 575px) {
+    .statics-page {
+        padding: 60px 0;
+    }
+    .betting-table .bett-menu .nav-tabs {
+        justify-content: center;
+    }
+    .betting-table .bett-menu .nav-tabs .nav-item .nav-link {
+        padding: 7px 0;
+        border-radius: 0;
+    }
+    .betting-table .bett-menu .nav-tabs .nav-item .nav-link.active {
+        border-radius: 0;
+    }
+    .betting-table .bett-menu .nav-tabs .nav-item .nav-link i {
+        margin: 0;
+        padding: 0 12px;
+    }
+
+    .betting-table .bett-menu .nav-tabs .nav-item .nav-link .text {
+        display: none;
+    }
+    .betting-table .bett-menu .nav-tabs .nav-item .nav-link i {
+        margin-right: 0;
+    }
+    .betting-table .bett-menu .nav-tabs .nav-item {
+        width: 25%;
+        margin-right: 0;
+    }
+    .betting-table .bett-menu .nav-tabs .nav-item .nav-link {
+        justify-content: center;
+    }
+
+    /* tab-pane */
+    .statics-page h4.tab-title {
+        font-size: 16px;
+    } 
+    .statics-page h4.tab-title i {
+        font-size: 24px;
+    }
+    .statics-page .round-set.one .col-xl-3:nth-child(2n+1) .single-game:before {
+        display: none;
+    }
+    .statics-page .single-game:after, .statics-page .single-game:before {
+        display: none!important;
+    }
+
+    .statics-page .single-game {
+        margin-bottom: 30px;
+    }
+    .statics-page div[class*='col']:last-child .single-game:last-child {
+        margin-bottom: 0;
+    }
+    .statics-page .round-set h3.title {
+        margin-bottom: 17px;
+    }
+
+    /* match winner */
+    .statics-page .match-winner .single-match-winner {
+        padding: 30px;
+        /* display: block; */
+    }
+    .statics-page .match-winner .single-match-winner .circle span.cicle-title {
+        position: initial;
+        font-size: 15px;
+        margin-top: 10px;
+    }
+    .statics-page .match-winner .single-match-winner .circle canvas {
+        width: 70px!important;
+        height: 70px!important;
+    }
+    .statics-page .match-winner .single-match-winner .single-percentage span.number {
+        font-size: 25px;
+        margin-top: 0;
+    }
+    .statics-page .match-winner .single-match-winner .single-percentage span.title {
+        font-size: 15px;
+        margin-bottom: 0;
+    }
+    .statics-page .match-winner .single-match-winner .single-percentage:after {
+        display: none;
+    }
+    .statics-page .match-winner .single-match-winner .single-percentage {
+        top: -14px;
+    }
+    .statics-page .match-winner .single-match-winner {
+        margin-bottom: 30px;
+    }
+    .statics-page .match-winner {
+        padding: 60px 0 30px;
+    }
+
+    /* recent match list */
+    .statics-page .matched-for-result .single-upcoming-match {
+        padding: 30px 25px;
+    }
+    .statics-page .matched-for-result .single-upcoming-match .summery {
+        position: initial;
+        padding: 20px 0;
+    }
+    .statics-page .matched-for-result .upcoming-match-list .single-upcoming-match .single-team:last-child {
+        padding-left: 10px;
+    }
+    .statics-page .matched-for-result .single-upcoming-match .single-team .part-logo img {
+        height: 50px;
+    }
+    .statics-page .matched-for-result .single-upcoming-match div {
+        order: 0!important;
+    }
+    .statics-page .matched-for-result .upcoming-match-list {
+        margin-bottom: 30px;
+    }
+    .statics-page .matched-for-result .upcoming-match-list.mt-30 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    .statics-page {
+        padding: 60px 0;
+    }
+    .betting-table .bett-menu .nav-tabs {
+        justify-content: center;
+    }
+    .betting-table .bett-menu .nav-tabs .nav-item .nav-link {
+        padding: 7px 0;
+        border-radius: 0;
+    }
+    .betting-table .bett-menu .nav-tabs .nav-item .nav-link.active {
+        border-radius: 0;
+    }
+    .betting-table .bett-menu .nav-tabs .nav-item .nav-link i {
+        margin: 0;
+        padding: 0 12px;
+    }
+
+    .betting-table .bett-menu .nav-tabs .nav-item .nav-link .text {
+        display: none;
+    }
+    .betting-table .bett-menu .nav-tabs .nav-item .nav-link i {
+        margin-right: 0;
+    }
+    .betting-table .bett-menu .nav-tabs .nav-item {
+        width: 25%;
+        margin-right: 0;
+    }
+    .betting-table .bett-menu .nav-tabs .nav-item .nav-link {
+        justify-content: center;
+    }
+
+    /* tab-pane */
+    .statics-page h4.tab-title {
+        font-size: 16px;
+    } 
+    .statics-page h4.tab-title i {
+        font-size: 24px;
+    }
+    .statics-page .round-set.one .col-xl-3:nth-child(2n+1) .single-game:before {
+        display: none;
+    }
+    .statics-page .single-game:after, .statics-page .single-game:before {
+        display: none!important;
+    }
+
+    .statics-page .single-game {
+        margin-bottom: 30px;
+    }
+    .statics-page div[class*='col']:last-child .single-game:last-child {
+        margin-bottom: 0;
+    }
+    .statics-page .round-set h3.title {
+        margin-bottom: 17px;
+    }
+
+    /* match winner */
+    .statics-page .match-winner .single-match-winner {
+        padding: 30px;
+        /* display: block; */
+    }
+    .statics-page .match-winner .single-match-winner .circle span.cicle-title {
+        position: initial;
+        font-size: 15px;
+        margin-top: 10px;
+    }
+    .statics-page .match-winner .single-match-winner .circle canvas {
+        width: 70px!important;
+        height: 70px!important;
+    }
+    .statics-page .match-winner .single-match-winner .single-percentage span.number {
+        font-size: 25px;
+        margin-top: 0;
+    }
+    .statics-page .match-winner .single-match-winner .single-percentage span.title {
+        font-size: 15px;
+        margin-bottom: 0;
+    }
+    .statics-page .match-winner .single-match-winner .single-percentage:after {
+        display: none;
+    }
+    .statics-page .match-winner .single-match-winner .single-percentage {
+        top: -14px;
+    }
+    .statics-page .match-winner .single-match-winner {
+        margin-bottom: 30px;
+    }
+    .statics-page .match-winner {
+        padding: 60px 0 30px;
+    }
+
+    /* recent match list */
+    .statics-page .matched-for-result .single-upcoming-match {
+        display: block;
+        padding: 40px 25px;
+    }
+    .statics-page .matched-for-result .single-upcoming-match .summery {
+        position: initial;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .statics-page .matched-for-result .upcoming-match-list .single-upcoming-match .single-team:last-child {
+        padding-left: 0;
+    }
+    .statics-page .matched-for-result .single-upcoming-match .single-team .part-logo img {
+        height: 50px;
+    }
+    .statics-page .matched-for-result .single-upcoming-match div {
+        order: 0;
+    }
+    .statics-page .matched-for-result .upcoming-match-list {
+        margin-bottom: 30px;
+    }
+    .statics-page .matched-for-result .upcoming-match-list.mt-30 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
