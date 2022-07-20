@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,7 +35,17 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('register');
 });
+Route::get('/dashboard', function () {
+    return view('layouts.dashboard');
+});
 
 
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('{path}','HomeController@index')->where( 'path', '([A-z\d\-/_.]+)?' );
+//Route::post('login', [ 'as' => 'login', 'uses' => 'Auth/LoginController@login']);
+Route::post('login', [LoginController::class, 'login'])->name('login');
 
 
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
