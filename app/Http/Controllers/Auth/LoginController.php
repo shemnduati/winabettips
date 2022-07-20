@@ -33,6 +33,9 @@ class LoginController extends Controller
      *
      * @return void
      */
+    protected $maxAttempts = 3; // Amount of attempts
+    protected $decayMinutes = 5; // Time to wait until next attempt
+
     public function __construct()
     {
         $this->middleware('guest')->except('logout');

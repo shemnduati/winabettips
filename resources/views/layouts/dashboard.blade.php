@@ -35,7 +35,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Football-Pre</div>
+                <div class="sidebar-brand-text mx-3">Football-Predictions</div>
             </a>
 
             <!-- Divider -->

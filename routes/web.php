@@ -43,7 +43,7 @@ Route::get('/dashboard', function () {
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('{path}','HomeController@index')->where( 'path', '([A-z\d\-/_.]+)?' );
 //Route::post('login', [ 'as' => 'login', 'uses' => 'Auth/LoginController@login']);
-Route::post('login', [LoginController::class, 'login'])->name('login');
+//Route::post('login', [LoginController::class, 'login'])->name('login');
 
 
 Auth::routes();

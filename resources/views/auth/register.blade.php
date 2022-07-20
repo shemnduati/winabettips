@@ -42,9 +42,9 @@
                 <div class="all-form">
                     <div class="single-form" id="first-step">
                         <form method="POST" action="{{ route('register') }}">
+                            @csrf
                             <div>
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-                                <label for="firstName">Full Name</label>
+                                <input id="name" placeholder="Full Name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -52,8 +52,7 @@
                                 @enderror
                             </div>
                             <div>
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-                                <label for="emailAdd">Email Address</label>
+                                <input id="email" placeholder="Email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -61,8 +60,7 @@
                             @enderror
                             </div>
                             <div>
-                                <input id="phone" type="phone" class="form-control @error('phone') is-invalid @enderror" name="email" value="{{ old('phone') }}" required autocomplete="phone">
-                                <label for="emailAdd">Phone Number</label>
+                                <input id="phone" placeholder="Phone Number" type="phone" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone">
                                 @error('phone')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -71,14 +69,12 @@
                             </div>
                             <div>
                                 <div>
-                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
+                                    <input id="password" placeholder="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
-                                    <label for="firstName">Password</label>
                                     @error('name')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -86,14 +82,13 @@
                                     @enderror
                                 </div>
                                 <div>
-                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                    <input id="password-confirm" placeholder="Confirm Password" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
 
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
-                                    <label for="firstName"> Confirm Password</label>
                                 </div>
                             </div><p>By clicking "Submit", you confirm that you have read and understood the FootballPrediction terms <a href="#">Privacy & Coockie Policy</a>, and agree to its terms.</p>
                             <button class="next" type="submit"> {{ __('Register') }}</button>
