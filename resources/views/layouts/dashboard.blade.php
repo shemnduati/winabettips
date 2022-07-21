@@ -71,19 +71,22 @@
                     <span>User Management</span>
                 </a>
             </li>
-            
-             <!-- Nav Item - Dashboard -->
-             <li class="nav-item">
-                <a class="nav-link" href="/profile">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Profile</span></a>
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <router-link to="/users" class="nav-link">
+                    <i class="fas fa-fw fa-tachometer-alt teal"></i>
+                    <span>
+                        Users Managemnet
+                    </span>
+                </router-link>
             </li>
+             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
                 <router-link to="/profile" class="nav-link">
-                    <i class="nav-icon fas fa-shopping-basket teal"></i>
-                    <p>
-                        My Orders
-                    </p>
+                    <i class="fas fa-fw fa-tachometer-alt teal"></i>
+                    <span>
+                        My Profile
+                    </span>
                 </router-link>
             </li>
 
@@ -139,7 +142,7 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <router-view></router-view>
+                    <router-view :user="{{auth()->user()}}"></router-view>
                     
                     <!-- Content Row -->
 

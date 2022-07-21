@@ -7,9 +7,15 @@ import VueAxios from 'vue-axios';
 
 import axios from 'axios';
 Vue.use(VueAxios, axios);
+import Form  from 'vform';
+ 
+
+
+window.Form = Form;
 
 let routes = [
     { path: '/profile', component: require('./components/profile.vue').default },
+    { path: '/users', component: require('./components/users.vue').default },
 ];
 
 
