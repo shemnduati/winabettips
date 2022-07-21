@@ -19,13 +19,14 @@
 
     <!-- Custom styles for this template-->
     <link href="{{asset('css/sb-admin.min.css')}}" rel="stylesheet">
+    <link href="{{ mix('css/app.css') }}" type="text/css" rel="stylesheet" />
 
 </head>
 
 <body id="page-top">
 
     <!-- Page Wrapper -->
-    <div id="wrapper">
+    <div class="wrapper" id="app">
 
         <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
@@ -72,10 +73,18 @@
             </li>
             
              <!-- Nav Item - Dashboard -->
-             <li class="nav-item active">
-                <a class="nav-link" href="/employees">
+             <li class="nav-item">
+                <a class="nav-link" href="/profile">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>FootballPredictrions</span></a>
+                    <span>Profile</span></a>
+            </li>
+            <li class="nav-item">
+                <router-link to="/profile" class="nav-link">
+                    <i class="nav-icon fas fa-shopping-basket teal"></i>
+                    <p>
+                        My Orders
+                    </p>
+                </router-link>
             </li>
 
         </ul>
@@ -130,12 +139,8 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
-
-                    <!-- Content Row -->
-                    <div class="row">
-                        @yield('content')
-                    </div>
+                    <router-view></router-view>
+                    
                     <!-- Content Row -->
 
                     <!-- Content Row -->
@@ -169,15 +174,18 @@
     </a>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="{{ mix('js/app.js') }}"></script>
+    <script src="{{ mix('js/app.js') }}" type="text/javascript"></script>
     <!-- Custom scripts for all pages-->
     <script src="{{asset('js/sb-admin.min.js')}}"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-
+@auth
+    <script>
+        window.user = @json(auth()->user())
+    </script>
+@endauth
 </body>
 
 </html>

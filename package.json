@@ -19,11 +19,15 @@
         "resolve-url-loader": "^5.0.0",
         "sass": "^1.32.11",
         "sass-loader": "^11.0.1",
-        "vue": "^2.7.7"
+        "vue": "^2.7.7",
+        "vue-loader": "^15.9.8",
+        "vue-template-compiler": "^2.7.7"
     },
     "dependencies": {
         "admin-lte": "^3.0.1",
         "bootstrap": "^4.1.0",
-        "jquery": "^3.2.1"
+        "jquery": "^3.2.1",
+        "vue-axios": "^3.4.1",
+        "vue-router": "^3.1.2"
     }
 }

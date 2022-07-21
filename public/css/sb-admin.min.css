@@ -9014,15 +9014,15 @@ body {
 a:focus {
     outline: 0;
 }
-#wrapper {
+.wrapper {
     display: flex;
 }
-#wrapper #content-wrapper {
+.wrapper #content-wrapper {
     background-color: #f8f9fc;
     width: 100%;
     overflow-x: hidden;
 }
-#wrapper #content-wrapper #content {
+.wrapper #content-wrapper #content {
     flex: 1 0 auto;
 }
 .container,

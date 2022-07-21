@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\API\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,11 +42,11 @@ Route::get('/dashboard', function () {
 
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('{path}','HomeController@index')->where( 'path', '([A-z\d\-/_.]+)?' );
+//Route::get('{path}','HomeController@index')->where( 'path', '([A-z\d\-/_.]+)?' );
 //Route::post('login', [ 'as' => 'login', 'uses' => 'Auth/LoginController@login']);
 //Route::post('login', [LoginController::class, 'login'])->name('login');
 
 
 Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
