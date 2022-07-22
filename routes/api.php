@@ -15,8 +15,10 @@ use App\Http\Controllers\API\UserController;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
 Route::get('profile', [UserController::class, 'profile']);
+Route::put('profile', [UserController::class, 'updateProfile']);
+Route::apiResources(['/user' => 'API\UserController']);

@@ -8,7 +8,7 @@
   }
 </style>
 <template>
-    <div class="container" v-if="$gate.isAdmin()">
+    <div class="container">
         <div class="row mt-5">
         <div class="col-md-12">
           <div class="card">
@@ -92,9 +92,8 @@
                   <select v-model="form.role" class="form-control" name="role" id="role"
                           :class="{ 'is-invalid': form.errors.has('role') }"  >
                       <option selected value="">--Select UserType--</option>
-                      <option  value="writer">Writer</option>
-                      <option value="editor">Editor</option>
                       <option  value="admin">Admin</option>
+                      <option value="client">Client</option>
                   </select>
                   <has-error :form="form" field="role"></has-error>
                 </div>

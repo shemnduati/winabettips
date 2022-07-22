@@ -16,6 +16,7 @@ window.Form = Form;
 let routes = [
     { path: '/profile', component: require('./components/profile.vue').default },
     { path: '/users', component: require('./components/users.vue').default },
+    { path: '/games', component: require('./components/games.vue').default },
 ];
 
 
