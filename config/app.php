@@ -231,5 +231,18 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
     ],
+     //for accessing .env variables
+     "API_FOOTBALL_TOKEN" => [
+        'key' => env("API_FOOTBALL_TOKEN")
+    ],
+    "SLEEP_DURATION" => [
+        'key' => env("SLEEP_DURATION")
+    ],
+    "SESSION_EXPIRY_TIME" => [
+        'key' => env("SESSION_EXPIRY_TIME")
+    ],
+    "IS_ADMIN" => [
+        'key' => env("IS_ADMIN")
+    ]
 
 ];
