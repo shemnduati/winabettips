@@ -9,6 +9,7 @@ use GuzzleHttp\Client;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Http;
 use App\Models\Predictions;
+use Carbon\Carbon;
 class GameController extends Controller
 {
     /**
@@ -73,6 +74,12 @@ class GameController extends Controller
         //
     }
 
+
+    public function predictions()
+    {
+        return predictions::latest()->paginate(30);
+    }
+
     /**
      * Update the specified resource in storage.
      *
@@ -98,9 +105,10 @@ class GameController extends Controller
 
     public function fetch()
     {
+        $current_date = Carbon::now();
         $APIkey=config("app.API_FOOTBALL_TOKEN.key");
-        $from = '2021-07-25';
-        $to = '2021-07-25';
+        $from = $current_date = date('Y-m-d');
+        $to = $current_date = date('Y-m-d');
     
         $curl_options = array(
         CURLOPT_URL => "https://apiv3.apifootball.com/?action=get_events&from=$from&to=$to&APIkey=$APIkey",
@@ -120,16 +128,6 @@ class GameController extends Controller
     }
     public function search()
     {
-        if ($search = \Request::get('q')) {
-            $users = User::where(function ($query) use ($search) {
-                $query->where('name', 'LIKE', "%$search%")
-                    ->orWhere('email', 'LIKE', "%$search%")
-                    ->orWhere('role', 'LIKE', "%$search%");
-            })->paginate(20);
-        } else {
-            $users = User::latest()->paginate(10);
-        }
-        return $users;
-
+       
     }
 }

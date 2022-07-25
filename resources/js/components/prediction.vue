@@ -15,9 +15,20 @@
 </template>
 
 <script>
-    export default {
-        mounted() {
-            console.log('Component mounted.')
+      export default {
+        data(){
+            return{
+
+            }
+        },
+        methods: {
+            getPredictions(){
+                axios.get('/api/predictions').then(({data}) =>(this.predictions = data));
+            },
+            
+        },
+        mounted (){
+            this.getPredictions();
         }
     }
 </script>

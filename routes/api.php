@@ -26,3 +26,4 @@ Route::get('user',[UserController::class,'index']);
 Route::get('fixtures', [GameController::class, 'fetch']);
 Route::get('findgames', [GameController::class, 'search']);
 Route::post('games', [GameController::class, 'store']);
+Route::get('predictions', [GameController::class, 'predictions']);
