@@ -73,6 +73,15 @@
             </li>
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
+                <router-link to="/predictions" class="nav-link">
+                    <i class="fas fa-fw fa-tachometer-alt teal"></i>
+                    <span>
+                        Predictions
+                    </span>
+                </router-link>
+            </li>
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
                 <router-link to="/games" class="nav-link">
                     <i class="fas fa-fw fa-tachometer-alt teal"></i>
                     <span>

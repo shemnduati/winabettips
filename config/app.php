@@ -241,8 +241,5 @@ return [
     "SESSION_EXPIRY_TIME" => [
         'key' => env("SESSION_EXPIRY_TIME")
     ],
-    "IS_ADMIN" => [
-        'key' => env("IS_ADMIN")
-    ]
 
 ];

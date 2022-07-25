@@ -15,12 +15,14 @@ use App\Http\Controllers\API\GameController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
 Route::get('profile', [UserController::class, 'profile']);
-Route::put('profile', [UserController::class, 'updateProfile']);
-Route::apiResources(['/user' => 'API\UserController']);
+//Route::put('profile', [UserController::class, 'updateProfile']);
+Route::apiResource('user', UserController::class);
+Route::get('user',[UserController::class,'index']);
 Route::get('fixtures', [GameController::class, 'fetch']);
 Route::get('findgames', [GameController::class, 'search']);
+Route::post('games', [GameController::class, 'store']);

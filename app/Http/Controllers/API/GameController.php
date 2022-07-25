@@ -8,7 +8,7 @@ use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Client;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Http;
-
+use App\Models\Predictions;
 class GameController extends Controller
 {
     /**
@@ -29,7 +29,37 @@ class GameController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            'match_id' => 'required|string|max:191',
+            'match_time' => 'required|string',
+            'league_name' => 'required|string|min:10',
+            'league_id' => 'required|string',
+            'match_hometeam_name' => 'required|string',
+            'match_awayteam_name' => 'required|string',
+            'prediction' => 'required|string',
+            'tip' => 'required|string',
+            'odds' => 'required|string',
+            'team_home_badge' => 'required|string',
+            'team_away_badge' => 'required|string',
+            
+        ]);
+        return Predictions::create([
+                'fixture_id'=>$request['match_id'],
+                'start_time'=>$request['match_time'],
+                'competition'=>$request['league_name'],
+                'leagueId'=>$request['league_id'],
+                'country'=>$request['country_name'],
+                'subcribers'=>$request['subcription'],
+                'flag'=>$request['country_logo'],
+                'team1'=>$request['match_hometeam_name'],
+                'team2'=>$request['match_awayteam_name'],
+                'prediction_type'=>$request['prediction'],
+                'odds'=>$request['odds'],
+                'ht_score' => $request['match_hometeam_halftime_score']. ':' .$request['match_awayteam_halftime_score'],
+                'final_score'=>$request['match_hometeam_ft_score']. ':' . $request['match_hometeam_ft_score'],
+                'status'=>$request['match_status'],
+                'date'=>$request['match_date'],
+        ]);
     }
 
     /**
@@ -69,8 +99,8 @@ class GameController extends Controller
     public function fetch()
     {
         $APIkey=config("app.API_FOOTBALL_TOKEN.key");
-        $from = '2021-07-12';
-        $to = '2021-07-12';
+        $from = '2021-07-25';
+        $to = '2021-07-25';
     
         $curl_options = array(
         CURLOPT_URL => "https://apiv3.apifootball.com/?action=get_events&from=$from&to=$to&APIkey=$APIkey",

@@ -6,7 +6,7 @@
                     <div class="card-header">
                          <h3 class="card-title">All Fixtures</h3>
                         <div class="card-tools ml-auto">
-                            <input type="text" id="myInput" @keyup="searchit"  placeholder="Search for games..">
+                            <input type="text" id="myInput"  v-model="search"  @keyup="searchit"  placeholder="Search for games..">
                         </div>
                     </div>
                          <!-- /.box-header -->
@@ -40,6 +40,10 @@
                         </tbody>
                         </table>
                     </div>
+                    <!-- /.box-body -->
+                        <div class="card-footer">
+                            
+                        </div>
                  </div>
                      <!-- Modal -->
                         <div class="modal fade" id="AddPrediction" tabindex="-1" role="dialog" aria-labelledby="AddNewLabel" aria-hidden="true">
@@ -48,7 +52,7 @@
                                 <div class="modal-header">
                                 <h5 class="modal-title" v-show="!editmode" id="AddPrediction">Add Prediction</h5>
                                 <h5 class="modal-title" v-show="editmode" id="AddPrediction">Update Prediction</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <button type="button" class="close" data-dismiss="modal" @click="close()" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                                 </div>
@@ -99,8 +103,8 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="submit" v-show="!editmode" class="btn btn-primary">AddPrediction</button>
+                                    <button type="button" class="btn btn-secondary" @click="close()" data-dismiss="modal">Close</button>
+                                    <button type="submit" v-show="!editmode" @click="addGame()" class="btn btn-primary">AddPrediction</button>
                                     <button type="submit" v-show="editmode" class="btn btn-primary">UpdatPrediction</button>
                                 </div>
                                 </form>
@@ -118,15 +122,32 @@
         data(){
             return{
                 fixtures:{},
+                searchQuery: null,
+                search:'',
                 editmode: false,
                 form: new Form ({
-                  id: '',
+                  match_id:'',
+                  match_time:'',
+                  league_name:'',
+                  league_id:'',
+                  country_name:'',
                   match_hometeam_name: '',
                   match_awayteam_name: '',
-                  away:'',
                   prediction:'',
                   tip:'',
+                  odds:'',
+                  subcription:'',
+                  team_home_badge:'',
+                  team_away_badge:'',
+                  match_status:'',
+                  match_date:'',
+                  country_logo:'',
+                  match_hometeam_halftime_score:'',
+                  match_awayteam_halftime_score:'',
+                  match_hometeam_ft_score:'',
+                  match_awayteam_ft_score:'',
                 })
+
             }
         },
         methods: {
@@ -134,22 +155,25 @@
                 axios.get('/api/fixtures').then(({data}) =>(this.fixtures = data));
             },
             addGame(){
+            this.form.post('api/games')
+              .then(() => {
+                  $('#AddPrediction').modal('hide');
+                      this.form.reset();
+                    })
+              .catch(() => {
 
+              })
             },
             selectFixtures(fix){
                 this.editmode = false;
                 $('#AddPrediction').modal('show');
                 this.form.fill(fix);
             },
+            close(){
+                $('#AddPrediction').modal('hide');
+            },
             searchit(){
-                let query = this.$parent.search;
-                axios.get('api/findgames?q=' + query)
-                    .then((data)=>{
-                        this.fixtures = data.data;
-                    })
-                    .catch(()=>{
-
-                    })
+                
             }
         },
         mounted (){

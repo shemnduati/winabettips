@@ -27,8 +27,11 @@
         "admin-lte": "^3.0.1",
         "bootstrap": "^4.1.0",
         "jquery": "^3.2.1",
+        "laravel-vue-pagination": "^3.0.0",
+        "sweetalert2": "^11.4.24",
         "vform": "^2.1.2",
         "vue-axios": "^3.4.1",
+        "vue-pagination-2": "^3.1.0",
         "vue-router": "^3.1.2"
     }
 }

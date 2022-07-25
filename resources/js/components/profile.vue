@@ -20,11 +20,6 @@
                         <div class="card-body">
                             <div class="tab-content">
                                 <!-- Activity Tab -->
-
-                                <!-- /.tab-pane -->
-               
-                                <!-- /.tab-pane -->
-
                                 <div class="tab-pane active" id="settings">
                                     <form class="form-horizontal">
                                         <div class="form-group">
@@ -49,12 +44,6 @@
                                             <div class="col-sm-10">
                                                 <input type="tel" v-model="form.phone_number" class="form-control" id="inputPhone" placeholder="Phone"  :class="{ 'is-invalid': form.errors.has('phone') }">
                                                 <has-error :form="form" field="phone"></has-error>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="photo" class="col-sm-2 control-label">Profile Photo</label>
-                                            <div class="col-sm-12">
-                                                <input type="file" @change="updateProfile"   name="photo" class="form-input">
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -97,23 +86,18 @@
                     email: '',
                     phone_number: '',
                     password:'',
-                    photo:'',
-                    value:[],
                 })
             }
         },
         methods:{
     
             updateInfo(){
-                this.$Progress.start();
                 this.form.put('api/profile/')
                     .then(()=>{
-                        Fire.$emit('AfterCreate');
                         Swal.fire({
                             type: 'success',
                             title: 'User Information Updated',
                         });
-                        this.$Progress.finish();
                     })
                     .catch(()=>{
                         Swal.fire({
@@ -121,7 +105,6 @@
                             title: 'Error!!',
                             text: 'error in uploading changes',
                         })
-                        this.$Progress.fail();
                     });
             },
             updateProfile(e){

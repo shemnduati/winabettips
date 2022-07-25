@@ -28,7 +28,6 @@
                   <th>Email</th>
                   <th>Phone No.</th>
                   <th>Role</th>
-                  <th>Status</th>
                   <th>Modify</th>
                 </tr>
                  <!-- v-for="user in users" :key="user.id" -->
@@ -36,13 +35,8 @@
                   <td>{{user.id}}</td>
                   <td>{{user.name}}</td>
                   <td>{{user.email}}</td>
-                  <td>{{user.phone_number}}</td>
+                  <td>{{user.phone}}</td>
                   <td><span class="label label-success">{{user.role | upText}}</span></td>
-                  <td>
-                    <span v-if="user.status_id == 1">Active</span>
-                    <span v-if="user.status_id == 0">Pending</span>
-                    <span v-if="user.status_id == 2">Suspended</span>
-                  </td>
                   <td>
                       <button class="btn btn-primary btn-sm" @click="editUser(user)">
                           <i class="fa fa-edit"></i>
@@ -70,7 +64,7 @@
             <div class="modal-header">
               <h5 class="modal-title" v-show="!editmode" id="AddNewUser">Add New User</h5>
               <h5 class="modal-title" v-show="editmode" id="AddNewUser">Update User Information</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <button type="button" class="close" data-dismiss="modal" @click="close()" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
@@ -85,8 +79,8 @@
                   <has-error :form="form" field="email"></has-error>
                 </div>
                 <div class="form-group">
-                  <input v-model="form.phone_number" type="number" class="form-control" name="phone_number" id="phone_number" placeholder="Phone Number" :class="{ 'is-invalid': form.errors.has('phone_number') }">
-                  <has-error :form="form" field="phone_number"></has-error>
+                  <input v-model="form.phone" type="number" class="form-control" name="phone" id="phone_number" placeholder="Phone Number" :class="{ 'is-invalid': form.errors.has('phone_number') }">
+                  <has-error :form="form" field="phone"></has-error>
                 </div>
                 <div class="form-group">
                   <select v-model="form.role" class="form-control" name="role" id="role"
@@ -98,22 +92,12 @@
                   <has-error :form="form" field="role"></has-error>
                 </div>
                 <div class="form-group">
-                  <select v-model="form.status_id" class="form-control" name="status_id" id="status_id"
-                          :class="{ 'is-invalid': form.errors.has('status_id') }">
-                      <option selected value="">--Select Account Status--</option>
-                      <option value="1">Active</option>
-                      <option value="0">Pending</option>
-                      <option value="2">Suspended</option>
-                  </select>
-                  <has-error :form="form" field="status_id"></has-error>
-                </div>
-                <div class="form-group">
                   <input v-model="form.password" type="password" class="form-control" name="password" id="password" placeholder="Password" :class="{ 'is-invalid': form.errors.has('password') }">
                   <has-error :form="form" field="password"></has-error>
                 </div>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" @click="close()" data-dismiss="modal">Close</button>
                 <button type="submit" v-show="!editmode" class="btn btn-primary">AddUser</button>
                 <button type="submit" v-show="editmode" class="btn btn-primary">UpdateUser</button>
               </div>
@@ -136,10 +120,8 @@
                 form: new Form ({
                   id: '',
                   name: '',
-                  phone_number: '',
-                    photo:'profile.png',
+                  phone: '',
                   role: '',
-                  status_id: '',
                   email: '',
                   password: '',
                 })
@@ -152,23 +134,16 @@
                         this.users = response.data;
                     });
             },
-            getCategories(){
-              window.axios.get('/api/category').then(({ data }) => (this.categories = data.data));
-            },
             updateUserInfo() {
-              this.$Progress.start();
               this.form.put('api/user/'+this.form.id)
               .then(() => {
-                Fire.$emit('AfterCreate');
                   $('#AddNew').modal('hide');
                       this.form.reset();
                       Swal.fire({
                           type: 'success',
                           title: 'User Information Updated',
                       })
-                this.$Progress.finish();
               }).catch(() => {
-                this.$Progress.fail();
               });
             },
             editUser(user) {
@@ -181,6 +156,9 @@
               this.editmode = false;
               this.form.reset();
               $('#AddNew').modal('show');
+            },
+            close(){
+              $('#AddNew').modal('hide');
             },
 
             deleteUser(id) {
@@ -212,7 +190,6 @@
                 })
             },
             addUser() {
-              this.$Progress.start();
               this.form.post('api/user')
               .then(() => {
                 Fire.$emit('AfterCreate');
@@ -222,8 +199,6 @@
                           type: 'success',
                           title: 'User Successfully Created',
                       })
-                this.$Progress.finish();
-
               })
               .catch(() => {
 
@@ -231,12 +206,10 @@
             },
             getUsers(){
                 axios.get("api/user").then(({ data }) => (this.users = data));
-             /* window.axios.get('api/user').then(({ data }) => (this.users = data.data));*/
             }
         },
         mounted() {
           this.getUsers();
-          this.getCategories()
           Fire.$on('AfterCreate',() => {
             this.getUsers();
           });
